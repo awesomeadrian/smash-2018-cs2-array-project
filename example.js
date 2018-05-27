@@ -20,7 +20,6 @@ function setup() {
   generateBalls();
 }
 
-
 function draw() {
   background(100, 0, 100);
   drawTestScores();
