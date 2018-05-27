@@ -14,7 +14,7 @@ body {
 
 #p5-canvas {
   margin: 10px auto;
-  width: 1010px;
-  height: 810px;
+  width: 810px;
+  height: 610px;
   border: 5px solid red;
 }
