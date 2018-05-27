@@ -38,10 +38,16 @@ function generateScores(min, max, num) {
 function generateBalls() {
   for(var i = 0; i < testScores.length; i++) {
     var radius = (testScores[i] + 50) / 2;
-    ballXValues.push(random(width - radius));
-    ballYValues.push(random(height - radius));
+    ballXValues.push(random(radius, width - radius));
+    ballYValues.push(random(radius, height - radius));
     ballXVelocities.push(random(1, 5));
+    if(random(1) >= 0.5) {
+      ballXVelocities[i] *= -1;
+    }
     ballYVelocities.push(random(1, 5));
+    if(random(1) >= 0.5) {
+      ballYVelocities[i] *= -1;
+    }
   }
 }
 
