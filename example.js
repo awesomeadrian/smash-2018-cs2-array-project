@@ -72,11 +72,11 @@ function drawTestScores() {
       color = "green";
     }
     var diameter = testScores[i] + 50;
-    var ballRadius = diameter / 2;
-    if(ballXValues[i] >= width - ballRadius || ballXValues[i] <= 0 + ballRadius) {
+    var radius = diameter / 2;
+    if(ballXValues[i] >= width - radius || ballXValues[i] <= 0 + radius) {
       ballXVelocities[i] *= -1;
     }
-    if(ballYValues[i] >= height - ballRadius || ballYValues[i] <= 0 + ballRadius) {
+    if(ballYValues[i] >= height - radius || ballYValues[i] <= 0 + radius) {
       ballYVelocities[i] *= -1;
     }
     ballXValues[i] += ballXVelocities[i];
@@ -88,15 +88,4 @@ function drawTestScores() {
     textAlign(CENTER);
     text(testScores[i], ballXValues[i], ballYValues[i]);
   }
-}
-
-function drawBall() {
-  if(ballX >= width - ballRadius || ballX <= 0 + ballRadius) {
-    ballXVelocity *= -1;
-  }
-  ballX += ballXVelocity;
-  //ballRadius += ballGrowth; // Uncomment this line for a "pulsing" effect!
-  var ballDiameter = ballRadius * 2; // local variable
-  fill("orange");
-  ellipse(ballX, ballY, ballDiameter, ballDiameter);
 }
