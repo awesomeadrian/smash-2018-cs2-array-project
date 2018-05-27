@@ -50,6 +50,7 @@ function generateBalls() {
   }
 }
 
+// For Debugging!
 function printTestScores() {
   for(var i = 0; i < testScores.length; i++) {
     console.log(testScores[i]);
